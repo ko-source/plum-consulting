@@ -1,9 +1,9 @@
-import React from "react";
+  import React from "react";
 
 const Button = ({ text, color, padding, showCircle, onClick, textColor }) => {
   return (
     <button
-      className="flex items-center justify-center rounded-full text-sm leading-4 text-center  font-medium shadow-md transition hover:opacity-90 cursor-pointer"
+      className="flex items-center justify-center rounded-full text-sm leading-4 text-center duration-300 ease-linear  font-medium shadow-md transition hover:opacity-80 cursor-pointer"
       style={{
         backgroundColor: color || "#BB00C9", 
         padding: padding || "16px 24px",
@@ -19,4 +19,4 @@ const Button = ({ text, color, padding, showCircle, onClick, textColor }) => {
   );
 };
 
-export default Button;
+  export default Button;
