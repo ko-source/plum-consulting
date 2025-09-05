@@ -55,15 +55,15 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="h-screen px-5 sm:px-10 md:px-[74px] mx-auto flex flex-col md:flex-row items-center justify-center text-white bg-cover bg-center bg-no-repeat dark:text-gray-200"
+      className="h-screen px-5 sm:px-10 xl:px-[74px] mx-auto flex flex-col md:flex-row items-center justify-center text-white bg-cover bg-center bg-no-repeat dark:text-gray-200"
       style={{
         backgroundImage: `url(${background})`,
         backgroundColor: 'rgba(0, 0, 0, 0.55)',
         backgroundBlendMode: 'multiply',
       }}
     >
-      <div className="flex flex-col md:flex-row w-full items-center gap-8">
-        <div className="flex flex-col md:w-1/2 p-3 md:pl-4 text-left">
+      <div className="flex flex-col lg:flex-row w-full items-center gap-8">
+        <div className="flex flex-col lg:w-1/2 p-3 md:pl-4 text-left">
           <motion.h2
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -87,7 +87,7 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        <div className="md:w-1/2 w-full">
+        <div className="lg:w-1/2 w-full">
           <motion.form
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -105,8 +105,8 @@ export default function Hero() {
             />
             {errors.name && <span className="text-red-500 text-sm">{errors.name}</span>}
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <div className="flex-1 flex flex-col">
+            <div className="flex flex-col md:flex-row gap-4">
+              <div className="md:w-[49%] flex flex-col ">
                 <input
                   name="email"
                   value={formData.email}
@@ -117,7 +117,7 @@ export default function Hero() {
                 />
                 {errors.email && <span className="text-red-500 text-sm">{errors.email}</span>}
               </div>
-              <div className="flex-1 flex flex-col">
+              <div className="md:w-[49%] flex flex-col ">
                 <input
                   name="phone"
                   value={formData.phone}

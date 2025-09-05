@@ -23,10 +23,9 @@ export default function Services() {
   ];
   const IconComponent = ({ iconName }) => {
   const iconMap = {
-    Code: <Code className="w-6 h-6 text-gray-500" />,
-    GraduationCap: <GraduationCap className="w-6 h-6 text-white" />,
-    Globe: <Globe className="w-6 h-6 text-gray-500" />,
-    Users: <Users className="w-6 h-6 text-pink-500" />,
+    Code: <Code className="w-7 h-7 text-gray-500" />,
+    GraduationCap: <GraduationCap className="w-7 h-7 text-white" />,
+    Globe: <Globe className="w-7 h-7 text-gray-500" />,
   };
 
   const Icon = iconMap[iconName] || <Code className="w-6 h-6 text-gray-500" />; 
@@ -34,13 +33,12 @@ export default function Services() {
 };
 
   return (
-    <section id="services" className="py-20 bg-white text-center relative">
-      {/* Header with Client Count */}
+    <section id="services" className="py-20 px-5 bg-white text-center relative">
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="flex items-center justify-center bg-white rounded-lg shadow-md p-4 mb-8 w-72 mx-auto"
+        className="flex items-center justify-center bg-white rounded-lg shadow-xl p-4 mb-8 w-72 mx-auto"
       >
         <div className="flex items-center space-x-2">
           <IconComponent iconName="Users" />
@@ -54,13 +52,13 @@ export default function Services() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.7, delay: 0.4 }}
-        className="mb-12 heading-title"
+        className="mb-20 heading-title"
       >
         Expert Services, Tailored For You
       </motion.h2>
 
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto">
         {services.map((service, index) => (
           <motion.div
             key={index}
@@ -68,23 +66,25 @@ export default function Services() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.6 + index * 0.2 }}
-            className={`bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center ${service.isPurple ? "bg-purple-600" : ""}`}
+            className={`bg-white p-8 min-h-64 rounded-2xl shadow-xl hover:shadow-3xl gap-y-8 transition-all duration-300 flex flex-col
+              ${service.isPurple ? "bg-purple-600" : ""} 
+              ${index === 2 ? "md:col-span-2 md:justify-self-center lg:col-span-1 lg:justify-self-auto" : ""}
+            `}
             style={service.isPurple ? { backgroundColor: "#BB00C9" } : {}}
           >
-            <div className="mr-4">
+            <div className={`rounded-2xl w-[56px] h-[56px] flex items-center justify-center ${service.isPurple ? "bg-[#D33AE0]" : "bg-[#F3F4F6]"}`}>
               <IconComponent iconName={service.iconName} />
             </div>
             <div>
-              <h3 className={`text-lg font-semibold ${service.isPurple ? "text-white" : "text-gray-800"}`}>
+              <h2 className={`text-2xl text-left leading-7 font-extrabold ${service.isPurple ? "text-white" : "text-black"}`}>
                 {service.title}
-              </h3>
-              <p className={`mt-2 text-sm ${service.isPurple ? "text-white" : "text-gray-600"}`}>
-                {service.description}
-              </p>
+              </h2>
             </div>
           </motion.div>
         ))}
       </div>
+
     </section>
   );
-}
+}  
+

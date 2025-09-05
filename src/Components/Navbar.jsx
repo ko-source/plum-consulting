@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <header className="w-full">
-      <div className="bg-[#1A1A1A] leading-[21px]  font-medium text-sm py-2 text-white px-[20px] md:px-[74px] flex justify-center md:justify-end items-center gap-4 dark:bg-gray-900">
+      <div className="bg-[#1A1A1A] leading-[21px]  font-medium text-sm py-2 text-white px-[20px] xl:px-[74px] flex justify-center md:justify-end items-center gap-4 dark:bg-gray-900">
         <div className="flex items-center gap-2 ">
           <Phone size={16} />
           <span>(1) 245 - 45678</span>
@@ -21,7 +21,7 @@ const Navbar = () => {
       </div>
 
       <div className="bg-white dark:bg-gray-800">
-        <div className="md:px-[74px] px-[20px] mx-auto flex items-center justify-between py-4">
+        <div className="xl:px-[74px] px-[20px] mx-auto flex items-center justify-between py-4">
 
           <div className="flex items-center md:pl-12">
             <img
@@ -31,7 +31,7 @@ const Navbar = () => {
             />
           </div>
 
-          <nav className="hidden md:flex items-center gap-9">
+          <nav className="hidden lg:flex items-center gap-9">
             <a href="#services" className="hover:text-[#A500B3] transition-colors duration-300 ease-in-out tracking-tight  uppercase leading-[22px] text-lg font-medium text-[#364153] dark:text-gray-200">
               SERVICES
             </a>
@@ -49,7 +49,7 @@ const Navbar = () => {
             </a>
           </nav>
           
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <Button 
               text="Free Consultation" 
               color="#BB00C9" 
@@ -58,7 +58,7 @@ const Navbar = () => {
             />
           </div>
           <button
-            className="md:hidden"
+            className="lg:hidden"
             onClick={() => setMenuOpen(!menuOpen)}
           >
            <Menu size={24} />
