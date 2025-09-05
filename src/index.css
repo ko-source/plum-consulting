@@ -9,3 +9,10 @@ body {
 @custom-variant dark (&:where(.dark, .dark *));
 
 
+.heading-title{
+    font-family: "Inter", Sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 55px;
+    color: #000000;
+}
