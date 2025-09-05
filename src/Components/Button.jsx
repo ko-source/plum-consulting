@@ -12,7 +12,7 @@ const Button = ({ text, color, padding, showCircle, onClick, textColor }) => {
       onClick={onClick}
     >
       {showCircle && (
-        <span className="w-3 h-3 bg-white rounded-full mr-2"></span>
+        <span className="w-3.5 h-3.5 bg-white rounded-full mr-2"></span>
       )}
       {text}
     </button>
