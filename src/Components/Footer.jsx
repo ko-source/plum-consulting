@@ -102,7 +102,7 @@ const Footer = () => {
             <li><a href="#" className="text-[#99A1AF] hover:text-white  transition-colors duration-200 font-medium ">LinkedIn</a></li>
           </ul>
         </div>
-        <div className="text-left">
+        <div className="text-left mb-10 md:mb-0">
           <h3 className="text-lg font-semibold mb-2">Address</h3>
           <ul className="space-y-1 text-[#99A1AF] font-medium">
             <li>2025 Rockledge</li>
