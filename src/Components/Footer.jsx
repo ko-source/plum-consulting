@@ -8,7 +8,7 @@ const Footer = () => {
     focus:outline-none focus:ring-2 focus:ring-[#A500B3] transition focus:border-none duration-300 ease-in-out
   `;
   return (
-    <footer className="bg-black text-white py-12 px-4  md:px-[70px] md:py-16 md:pb-8  dark:bg-gray-900">
+    <footer className="bg-black text-white py-12 px-5  md:px-[70px] md:py-16 md:pb-8  dark:bg-gray-900">
       <div className="border-b border-gray-700 pb-10 pt-3">
         <motion.div
         initial={{ opacity: 0, y: 20 }}
