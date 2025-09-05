@@ -1,21 +1,13 @@
-
-import Hero from "./Components/Home";
-import Navbar from "./Components/navbar";
-import Services from "./Components/Services";
-// import Team from "./Components/Team";
-// import Contact from "./Components/Contact";
-// import Footer from "./Components/Footer";
-
+import { BrowserRouter as Router } from "react-router-dom";
+import AppRoutes from "./Routing/AppRoutes";
+import Layout from "./Layout/Layout";
 
 export default function App() {
   return (
-    <div className="w-full">
-      <Navbar />
-      <Hero />
-      <Services />
-      {/* <Team />
-      <Contact />
-      <Footer /> */}
-    </div>
+    <Layout>
+    <Router>
+      <AppRoutes />
+    </Router>
+    </Layout>
   );
 }
